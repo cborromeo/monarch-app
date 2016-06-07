@@ -16,9 +16,11 @@
 function InitMonarchBBOPLinker() {
     var jq = require('jquery');
     if (typeof(globalUseBundle) === 'undefined' || !globalUseBundle) {
+        console.log('InitMonarchBBOPLinker... using loaderGlobals bbop');
         var bbop = loaderGlobals.bbop;
     }
     else {
+        console.log('InitMonarchBBOPLinker... using require bbop');
         var bbop = require('bbop');
     }
 
@@ -131,6 +133,7 @@ bbop.monarch.linker.prototype.url = function (id, xid, modifier, category){
                 if (category == null){
                     throw new Error('category is missing!');
                 } else if (category != 'pathway' && !(/^_/.test(id))){
+                    console.log(xid);
                     retval = this.app_base + '/' + category + '/' + id;
                 }
             }
@@ -332,9 +335,11 @@ bbop.monarch.linker.prototype.set_anchor = function(id, args, xid, modifier){
 }
 
 
+console.log('define InitMonarchBBOPLinker');
 if (typeof loaderGlobals === 'object') {
     loaderGlobals.InitMonarchBBOPLinker = InitMonarchBBOPLinker;
 }
 if (typeof global === 'object') {
     global.InitMonarchBBOPLinker = InitMonarchBBOPLinker;
+    console.log('define InitMonarchBBOPLinker global');
 }

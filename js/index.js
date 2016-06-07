@@ -15,6 +15,7 @@ import 'jquery-ui';
 // import './jquery-ui-1.10.3.custom.min.js';
 import 'd3';
 import './search_form.js';
+import './autocomplete_simple.js';
 import './monarch-tabs.js';
 import './lib/monarch/widget/facet-filters.js';
 
@@ -32,10 +33,12 @@ window.getAnnotationScore = require("exports?getAnnotationScore!./monarch-common
 // import './monarch.js';
 
 // Core browser/server libraries
+import './lib/monarch/loaderHeader.js';
 import './lib/monarch/handler.js';
 import './lib/monarch/linker.js';
 import './lib/monarch/widget/browse.js';
 import './lib/monarch/widget/display/results_table_by_class_conf_bs3.js';
+import './lib/monarch/loaderFooter.js';
 
 import './jquery.cookie.js';
 import './jquery.xml2json.js';
@@ -43,7 +46,6 @@ import './jquery.xml2json.js';
 import './HomePage.js';
 import '../css/bbop.css';
 import './golr-table.js';
-import './overview.js';
 import './stupidtable.min.js';
 window.InitTables = require("exports?InitTables!./tables.js");
 

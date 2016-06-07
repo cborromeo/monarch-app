@@ -561,8 +561,6 @@ h1.downloadline {
 .bs3filter .panel {
     padding: 0;
     border:3px solid lightgray;
-    margin-bottom: 0px;
-    margin-top: .08em !important;
 }
 
 .bs3filter .panel .panel-heading{
@@ -581,6 +579,7 @@ h1.downloadline {
     margin: 0;
     padding: 3px;
 }
+
 
 div.bs3filter {
 }
@@ -725,7 +724,7 @@ div.bs3table {
 
 #results-area .bs3pager > div[id*="gen_id-bbop-html"] > div[id*="gen_id-bbop-html"]:nth-child(2),
 #results-area .bs3pager-bottom > div[id*="gen_id-bbop-html"] > div[id*="gen_id-bbop-html"]:nth-child(2) {
-    /*width: 360px;*/
+    width: 360px;
     padding: 10px 0 5px 10px;
     font-weight: 500;
 }
@@ -1058,20 +1057,10 @@ a:hover .hilite, a:active .hilite {
   position: fixed;
   width: 90%;
   padding: 0 !important;
-  margin:auto !important;
+  margin:auto !important;;
   top: 50px;
   border: none;
   background: transparent;
-}
-
-.beta-badge {
-	margin-left: 5px;
-	font-size: 10px;
-	color: #d9534f !important;
-}
-
-.pheno-info {
-    vertical-align:text-top;
 }
 
 
